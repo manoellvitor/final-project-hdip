@@ -1,0 +1,95 @@
+!Manoel Vitor Nascimento Lopes - 2019286
+!Script to automate the configuration of the switches
+
+!Entering to the enable mode
+enable
+
+!Configuring the date / time
+!Latter it will be changed altomaticly by the internet connection
+clock set 14:00:00 16 April 2020
+
+	!Acessing the global configurations
+	configure terminal
+  
+	!Change the switch name
+	hostname sw-l2-2960-1
+  
+	!Enabling the password type 7
+	service password-encryption
+	
+	!Enabling the log system
+	service timestamps log datetime msec
+  
+	!Desabling the DNS on the switch, I will use DNS server for it
+	no ip domain-lookup
+  
+	!Banner for the login screen
+	banner motd #                 uuuuuuu
+             uu$$$$$$$$$$$uu
+          uu$$$$$$$$$$$$$$$$$uu
+         u$$$$$$$$$$$$$$$$$$$$$u
+        u$$$$$$$$$$$$$$$$$$$$$$$u
+       u$$$$$$$$$$$$$$$$$$$$$$$$$u
+       u$$$$$$$$$$$$$$$$$$$$$$$$$u
+       u$$$$$$"   "$$$"   "$$$$$$u
+       "$$$$"      u$u       $$$$"
+        $$$u       u$u       u$$$
+        $$$u      u$$$u      u$$$
+         "$$$$uu$$$   $$$uu$$$$"
+          "$$$$$$$"   "$$$$$$$"
+            u$$$$$$$u$$$$$$$u
+             u$"$"$"$"$"$"$u
+  uuu        $$u$ $ $ $ $u$$       uuu
+ u$$$$        $$$$$u$u$u$$$       u$$$$
+  $$$$$uu      "$$$$$$$$$"     uu$$$$$$
+u$$$$$$$$$$$uu    """""    uuuu$$$$$$$$$$
+$$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
+ """      ""$$$$$$$$$$$uu ""$"""
+           uuuu ""$$$$$$$$$$uuu
+  u$$$uuu$$$$$$$$$uu ""$$$$$$$$$$$uuu$$$
+  $$$$$$$$$$""""           ""$$$$$$$$$$$"
+   "$$$$$"                      ""$$$$""
+     $$$"                         $$$$"
+
+ _  _  _       _                             _                  _         
+| || || |     | |                           | |                (_)        
+| || || | ____| | ____ ___  ____   ____     | |      ___   ____ _ ____    
+| ||_|| |/ _  ) |/ ___) _ \|    \ / _  )    | |     / _ \ / _  | |  _ \   
+| |___| ( (/ /| ( (__| |_| | | | ( (/ / _   | |____| |_| ( ( | | | | | |_ 
+ \______|\____)_|\____)___/|_|_|_|\____| )  |_______)___/ \_|| |_|_| |_(_)
+                                       |/                (_____|          
+#
+  
+	!Enabling password type 5 secret for the mode EXEC with privilege 
+	enable secret cct12#
+  
+	!Creating users with diferent privileges
+	username manoel secret cct12#
+	username cct password cct12#
+	username admin privilege 15 secret cct12#
+	
+	!Acessing the console line
+	line console 0
+		
+		!forcing the login with the users and password early setted
+		login local
+		
+		!Enabling password type 7
+		password cct12#
+		
+		!Sync the logs on the screen (Avoiding any error when you are tipping your commands)
+		logging synchronous
+		
+		!Enabling time for sessions and time with no activite
+		exec-timeout 5 30
+		
+		!Going back to the begining
+		end
+
+!Writting from the RAM to the NVRAM
+!Can be used the follow as well
+!copy running-config startup-config
+write
+	
+!Showing the configuration running
+show running-config
