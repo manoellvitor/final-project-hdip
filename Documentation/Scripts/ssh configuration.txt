@@ -1,0 +1,2 @@
+!Manoel Vitor Nascimento Lopes - 2019286
+!Script for SSH configuration
