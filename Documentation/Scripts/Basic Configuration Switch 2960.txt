@@ -6,25 +6,26 @@ enable
 
 !Configuring the date / time
 !Latter it will be changed altomaticly by the internet connection
-clock set 14:00:00 16 April 2020
+clock set 14:00:00 30 April 2020
 
-	!Acessing the global configurations
+    !Acessing the global configurations
 	configure terminal
-  
-	!Change the switch name
-	hostname sw-l2-2960-1
-  
-	!Enabling the password type 7
-	service password-encryption
-	
-	!Enabling the log system
-	service timestamps log datetime msec
-  
-	!Desabling the DNS on the switch, I will use DNS server for it
-	no ip domain-lookup
-  
-	!Banner for the login screen
-	banner motd #                 uuuuuuu
+
+        !Changing the Hostname
+		hostname sw-l2-2960-4
+        
+        !Enabling passowds type7 (More security)
+		service password-encryption
+
+        !Enabling the logs
+		service timestamps log datetime msec
+
+        !Desabling DNS function on the switch, DNS server will be seted 
+		no ip domain-lookup
+		
+        !Add a welcome msg to login page
+        banner motd #
+                 uuuuuuu
              uu$$$$$$$$$$$uu
           uu$$$$$$$$$$$$$$$$$uu
          u$$$$$$$$$$$$$$$$$$$$$u
@@ -59,37 +60,54 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
  \______|\____)_|\____)___/|_|_|_|\____| )  |_______)___/ \_|| |_|_| |_(_)
                                        |/                (_____|          
 #
-  
-	!Enabling password type 5 secret for the mode EXEC with privilege 
-	enable secret cct12#
-  
-	!Creating users with diferent privileges
-	username manoel secret cct12#
-	username cct password cct12#
-	username admin privilege 15 secret cct12#
-	
-	!Acessing the console line
-	line console 0
-		
-		!forcing the login with the users and password early setted
-		login local
-		
-		!Enabling password type 7
-		password cct12#
-		
-		!Sync the logs on the screen (Avoiding any error when you are tipping your commands)
-		logging synchronous
-		
-		!Enabling time for sessions and time with no activite
-		exec-timeout 5 30
-		
-		!Going back to the begining
-		end
 
-!Writting from the RAM to the NVRAM
-!Can be used the follow as well
-!copy running-config startup-config
+        !Enabling password type 5 secret for the mode EXEC with privilege
+		enable secret cct12#
+
+        !Creating users
+		username manoel secret cct12#
+	    username cct password cct12#
+	    username admin privilege 15 secret cct12#
+        
+        !Setting the default gateway
+		ip default-gateway 192.168.3.254
+        
+        !Setting the domain name
+		ip domain-name dpl.cct.ie
+
+        !Generating the ssh key (1024 bits)
+		crypto key generate rsa
+
+        !Changing the SSH version
+		ip ssh version 2
+
+        !Time out connect after 60 sec
+		ip ssh time-out 60
+
+        !Maximun number of connections at the same time
+		ip ssh authentication-retries 2
+		
+        !Activating local login
+         line console 0
+			login local
+			password cct12#
+			logging synchronous
+			exec-timeout 5 30
+			exit	
+        
+        !Activating virtual lines for remote access from 1 - 4		
+        line vty 0 4
+			login local
+			password cct12#
+			logging synchronous
+			exec-timeout 5 30
+			transport input ssh
+			exit
+
+        !Activating VLan
+		interface vlan 1
+			description Interface of management of Switch SW-L2-2960-4
+			ip address 192.168.3.251 255.255.255.0
+			no shutdown
+			end
 write
-	
-!Showing the configuration running
-show running-config
