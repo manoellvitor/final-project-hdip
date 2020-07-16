@@ -6,7 +6,7 @@ enable
 
 !Configuring the date / time
 !Latter it will be changed altomaticly by the internet connection
-clock set 14:00:00 30 April 2020
+clock set 14:00:00 10 July 2020
 
     !Acessing the global configurations
 	configure terminal
