@@ -1,0 +1,16 @@
+enable
+
+configure terminal
+
+!Create VLAN if not exist
+vlan {VLANNUMBER}
+
+!GIVE A NAME
+name {VLANNAME}
+
+!Select the interface
+interface fastEthernet 0/0
+
+switchport mode access
+
+switchport access vlan {VLANUMBER}
