@@ -12,7 +12,7 @@ clock set 14:00:00 10 July 2020
 	configure terminal
 
         !Changing the Hostname
-		hostname sw-l2-2960-4
+		hostname CORE-3650-1
         
         !Enabling passowds type7 (More security)
 		service password-encryption
@@ -52,13 +52,15 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
    "$$$$$"                      ""$$$$""
      $$$"                         $$$$"
 
- _  _  _       _                             _                  _         
-| || || |     | |                           | |                (_)        
-| || || | ____| | ____ ___  ____   ____     | |      ___   ____ _ ____    
-| ||_|| |/ _  ) |/ ___) _ \|    \ / _  )    | |     / _ \ / _  | |  _ \   
-| |___| ( (/ /| ( (__| |_| | | | ( (/ / _   | |____| |_| ( ( | | | | | |_ 
- \______|\____)_|\____)___/|_|_|_|\____| )  |_______)___/ \_|| |_|_| |_(_)
-                                       |/                (_____|          
+ ______   _______  _         _______  _______ _________
+(  __  \ (  ____ )( \       (  ____ \(  ____ \\__   __/
+| (  \  )| (    )|| (       | (    \/| (    \/   ) (   
+| |   ) || (____)|| | _____ | |      | |         | |   
+| |   | ||  _____)| |(_____)| |      | |         | |   
+| |   ) || (      | |       | |      | |         | |   
+| (__/  )| )      | (____/\ | (____/\| (____/\   | |   
+(______/ |/       (_______/ (_______/(_______/   )_(   
+                                                       
 #
 
         !Enabling password type 5 secret for the mode EXEC with privilege
@@ -70,7 +72,7 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
 	    username admin privilege 15 secret cct12#
         
         !Setting the default gateway
-		ip default-gateway 192.168.3.254
+		!ip default-gateway 192.168.0.1
         
         !Setting the domain name
 		ip domain-name dpl.cct.ie
@@ -105,9 +107,9 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
 			exit
 
         !Activating VLan
-		interface vlan 1
-			description Interface of management of Switch SW-L2-2960-4
-			ip address 192.168.3.251 255.255.255.0
-			no shutdown
+		!interface vlan 10
+		!	description Interface of management of Switch SW-L2-2960-1
+		!	ip address 192.168.0.251 255.255.255.0
+		!	no shutdown
 			end
 write
