@@ -1,18 +1,25 @@
-Main Domain - 
+Main Domain - dpl.cct.ie
 
 
-MASK - 255.255.255.0
 
 VLANS-
     RAD - Research & Development
         Vlan 100 : 192.168.0.0/24
         Gateway  : 192.168.0.1
+        Mask - 255.255.255.0
     MAN - Manufacturing
         Vlan 200 : 192.168.1.0/24
         Gateway  : 192.168.1.1
+        Mask - 255.255.255.0
     SAM - Sales & Marketing
         Vlan 300 : 192.168.2.0/24
         Gateway  : 192.168.2.1
+        Mask - 255.255.255.0
     ICT - Information & communications technology
         Vlan 1000 : 192.168.3.0/24
         Gateway   : 192.168.3.1
+        Mask - 255.255.255.0
+    DC - Data Center
+        Vlan 400  : 10.0.0.0/24
+        Gateway   : 10.0.0.1
+        Mask - 255.255.255.0
