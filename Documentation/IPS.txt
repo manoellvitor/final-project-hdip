@@ -1,12 +1,18 @@
 Main Domain - 
 
 
+MASK - 255.255.255.0
+
 VLANS-
     RAD - Research & Development
-        Vlan 100 : 192.168.0.0/16
+        Vlan 100 : 192.168.0.0/24
+        Gateway  : 192.168.0.1
     MAN - Manufacturing
-        Vlan 200 : 192.168.1.0/16
+        Vlan 200 : 192.168.1.0/24
+        Gateway  : 192.168.1.1
     SAM - Sales & Marketing
-        Vlan 300 : 192.168.2.0/16
-    ICT - Information and communications technology
-        Vlan 1000 : 192.168.3.0/16
+        Vlan 300 : 192.168.2.0/24
+        Gateway  : 192.168.2.1
+    ICT - Information & communications technology
+        Vlan 1000 : 192.168.3.0/24
+        Gateway   : 192.168.3.1
