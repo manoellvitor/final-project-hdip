@@ -20,7 +20,11 @@ VLANS-
         Gateway   : 10.0.0.1
         Mask - 255.255.255.0
     DIP - Dublin Internet Provider
-        Vlan 500  : 10.55.55.0/24
+        Vlan 500  : 10.55.55.10/24
+        Gateway   : 10.55.55.1
+        Mask - 255.255.255.0
+    DIP 2 - Dublin Internet Provider 2
+        Vlan 500  : 10.55.55.11/24
         Gateway   : 10.55.55.1
         Mask - 255.255.255.0
     ICT - Information & communications technology
