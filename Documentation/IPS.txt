@@ -15,10 +15,6 @@ VLANS-
         Vlan 300 : 192.168.2.0/24
         Gateway  : 192.168.2.1
         Mask - 255.255.255.0
-    ICT - Information & communications technology
-        Vlan 1000 : 192.168.3.0/24
-        Gateway   : 192.168.3.1
-        Mask - 255.255.255.0
     DC - Data Center
         Vlan 400  : 10.0.0.0/24
         Gateway   : 10.0.0.1
@@ -27,3 +23,8 @@ VLANS-
         Vlan 500  : 10.55.55.0/24
         Gateway   : 10.55.55.1
         Mask - 255.255.255.0
+    ICT - Information & communications technology
+        Vlan 1000 : 192.168.3.0/24
+        Gateway   : 192.168.3.1
+        Mask - 255.255.255.0
+
