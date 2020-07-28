@@ -12,7 +12,7 @@ clock set 14:00:00 10 July 2020
 	configure terminal
 
         !Changing the Hostname
-		hostname CORE-3650-1
+		hostname SW-RAD-1
         
         !Enabling passowds type7 (More security)
 		service password-encryption
@@ -71,9 +71,6 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
 	    username cct password cct12#
 	    username admin privilege 15 secret cct12#
         
-        !Setting the default gateway
-		!ip default-gateway 192.168.0.1
-        
         !Setting the domain name
 		ip domain-name dpl.cct.ie
 
@@ -108,8 +105,8 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
 
         !Activating VLan
 		!interface vlan 10
-		!	description Interface of management of Switch SW-L2-2960-1
-		!	ip address 192.168.0.251 255.255.255.0
-		!	no shutdown
+			description Interface of management of Switch SW-L2-2960-1
+			ip address 192.168.0.251 255.255.255.0
+			no shutdown
 			end
 write
