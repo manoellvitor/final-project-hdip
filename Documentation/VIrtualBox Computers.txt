@@ -27,6 +27,15 @@ PWD - cct12£
 
 ###### Linux Mint ICT ######
 HOSTNAME - ict-VirtualBox
+IP - 10.0.2.110
+MASK - 255.255.255.0
+BCAST - 10.0.2.255
+GW - 10.0.2.2
+USER - ict
+PWD - cct12#
+
+###### Linux Lite MAN ######
+HOSTNAME - man-VirtualBox
 IP - DHCP
 MASK - DHCP
 BCAST - DHCP
