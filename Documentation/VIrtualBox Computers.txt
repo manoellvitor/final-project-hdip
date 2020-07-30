@@ -1,4 +1,10 @@
-###### Ubuntu Server DPL ######
+#Fazendo o download do Webmin do site Sourceforge
+wget http://prdownloads.sourceforge.net/webadmin/webmin_1.791_all.deb
+
+#Instalando o Webmin
+sudo dpkg -i webmin_1.791_all.deb
+
+###### DPL Server SAMBA | DHCP | FILES | WEB ######
 HOSTNAME - dpldublindc01
 IP - 10.0.2.15
 MASK - 255.255.255.0
@@ -6,6 +12,9 @@ BCAST - 10.0.2.255
 GW - 10.0.2.2
 USER - manoel
 PWD - manoel
+
+USER - root
+PWD - cct12£
 
 ###### Linux Mint SAM ######
 HOSTNAME - sam-VirtualBox
@@ -15,6 +24,15 @@ BCAST - DHCP
 GW - DHCP
 USER - sam
 PWD - cct12£
+
+###### Linux Mint ICT ######
+HOSTNAME - ict-VirtualBox
+IP - DHCP
+MASK - DHCP
+BCAST - DHCP
+GW - DHCP
+USER - ict
+PWD - cct12#
 
 ###### Windows 10 RAD ######
 HOSTNAME - rad-VirtualBox
