@@ -35,7 +35,7 @@ USER - ict
 PWD - cct12#
 
 ###### Linux Lite MAN ######
-HOSTNAME - man-VirtualBox
+HOSTNAME - dplmandt01
 IP - DHCP
 MASK - DHCP
 BCAST - DHCP
@@ -52,6 +52,14 @@ GW - DHCP
 USER - rad
 PWD - cct12#
 
+###### Linux Ubuntu RAD ######
+HOSTNAME - dplraddt02
+IP - DHCP
+MASK - DHCP
+BCAST - DHCP
+GW - DHCP
+USER - rad
+PWD - cct12£
 
 ###### Domain #######
 dpl.intra
