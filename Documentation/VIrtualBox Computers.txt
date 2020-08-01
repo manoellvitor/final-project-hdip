@@ -1,9 +1,3 @@
-#Fazendo o download do Webmin do site Sourceforge
-wget http://prdownloads.sourceforge.net/webadmin/webmin_1.791_all.deb
-
-#Instalando o Webmin
-sudo dpkg -i webmin_1.791_all.deb
-
 ###### DPL Server SAMBA | DHCP | FILES | WEB ######
 HOSTNAME - dpldublindc01
 IP - 10.0.2.15
