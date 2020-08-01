@@ -40,11 +40,11 @@ IP - DHCP
 MASK - DHCP
 BCAST - DHCP
 GW - DHCP
-USER - ict
+USER - manu
 PWD - cct12#
 
 ###### Windows 10 RAD ######
-HOSTNAME - rad-VirtualBox
+HOSTNAME - dplraddt01
 IP - DHCP
 MASK - DHCP
 BCAST - DHCP
@@ -59,4 +59,8 @@ dpl.intra
 
 ###### Samaba Administrator Password ########
 USER - administrator
+PWD - Mariarosa12£
+
+###### Webmin ########
+USER - root
 PWD - Mariarosa12£
