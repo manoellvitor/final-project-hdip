@@ -11,7 +11,7 @@ USER - root
 PWD - cct12£
 
 ###### Linux Mint SAM ######
-HOSTNAME - sam-VirtualBox
+HOSTNAME - dpldamdt01
 IP - DHCP
 MASK - DHCP
 BCAST - DHCP
@@ -20,7 +20,7 @@ USER - sam
 PWD - cct12£
 
 ###### Linux Mint ICT ######
-HOSTNAME - ict-VirtualBox
+HOSTNAME - dplictdt01
 IP - 10.0.2.110
 MASK - 255.255.255.0
 BCAST - 10.0.2.255
