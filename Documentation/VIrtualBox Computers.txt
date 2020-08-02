@@ -59,10 +59,11 @@ PWD - cct12£
 dpl.intra
 
 
-###### Samaba Administrator Password ########
+###### Samba Administrator Password ########
 USER - administrator
-PWD - Mariarosa12£
+PWD - Mariarosa12#
 
 ###### Webmin ########
+IP - https://dpldublindc01.dpl.intra:10000
 USER - root
-PWD - Mariarosa12£
+PWD - root
