@@ -67,3 +67,20 @@ PWD - Mariarosa12#
 IP - https://dpldublindc01.dpl.intra:10000
 USER - root
 PWD - root
+
+--------------------------USERS------------------------------
+==RAD
+	USER - rad.01
+	PWD  - Mariarosa12#
+
+	USER - rad.02
+	PWD  - Mariarosa12#
+==MAN
+	USER - man.01
+	PWD  - Mariarosa12#
+==SAM
+	USER - sam.01
+	PWD  - Mariarosa12#
+==ICT
+	USER - ict.sysadmin
+	PWD  - Mariarosa12#
