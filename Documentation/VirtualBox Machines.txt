@@ -1,0 +1,41 @@
+########### IPS #############
+Firewa.ll - 192.168.1.1
+https://192.168.1.1:10443
+Users - admin / root
+Password - Mariarosa12#
+
+###### DPL Firewall Server ######
+HOSTNAME - dpldublindc01fw01
+IP - 192.168.1.1
+MASK - 255.255.255.0
+BCAST - 192.168.1.255
+GW - 192.168.1.1
+USER - manoel
+PWD - Mariarosa12#
+
+###### DPL Samba Server ######
+HOSTNAME - dpldublindc01sb01
+IP - 192.168.1.10
+MASK - 255.255.255.0
+BCAST - 192.168.1.255
+GW - 192.168.1.1
+USER - manoel
+PWD - Mariarosa12#
+
+###### DPL ICT - Windows 7 ######
+HOSTNAME - dplictdt01
+IP - DHCP
+MASK - DHCP
+BCAST - DHCP
+GW - DHCP
+USER - ict
+PWD - Mariarosa12#
+
+###### DPL ICT - Linux Mint ######
+HOSTNAME - dplictdt02
+IP - DHCP
+MASK - DHCP
+BCAST - DHCP
+GW - DHCP
+USER - ict
+PWD - Mariarosa12#

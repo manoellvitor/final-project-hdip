@@ -5,10 +5,10 @@ MASK - 255.255.255.0
 BCAST - 10.0.2.255
 GW - 10.0.2.2
 USER - manoel
-PWD - manoel
+PWD - Mariarosa12#
 
 USER - root
-PWD - cct12£
+PWD - Mariarosa12#
 
 ###### Linux Mint SAM ######
 HOSTNAME - dpldamdt01
@@ -27,6 +27,15 @@ BCAST - 10.0.2.255
 GW - 10.0.2.2
 USER - ict
 PWD - cct12#
+
+###### Windows 7 ICT ######
+HOSTNAME - dplictdt02
+IP - 10.0.2.110
+MASK - 255.255.255.0
+BCAST - 10.0.2.255
+GW - 10.0.2.2
+USER - Manoel
+PWD - Mariarosa12#
 
 ###### Linux Lite MAN ######
 HOSTNAME - dplmandt01
