@@ -12,7 +12,7 @@ clock set 14:00:00 10 July 2020
 	configure terminal
 
         !Changing the Hostname
-		hostname SW-RAD-1
+		hostname SW-DC-01
         
         !Enabling passowds type7 (More security)
 		service password-encryption
@@ -67,7 +67,7 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
 		enable secret cct12#
 
         !Creating users
-		username manoel secret cct12#
+	    username manoel secret cct12#
 	    username cct password cct12#
 	    username admin privilege 15 secret cct12#
         
@@ -98,7 +98,7 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
 			exit	
         
         !Activating virtual lines for remote access from 1 - 4		
-        line vty 0 4
+        line vty 0 15
 			login local
 			password cct12#
 			logging synchronous
@@ -109,7 +109,7 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
         !Activating VLan
 		interface vlan 1
 			description Management Interface
-			ip address 192.168.0.50 255.255.255.0
+			ip address 10.0.0.250 255.255.255.0
 			no shutdown
 			end
 write
