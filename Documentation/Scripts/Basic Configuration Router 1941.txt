@@ -4,7 +4,7 @@
 enable
 clock set 14:00:00 10 July 2020
 	configure terminal
-		hostname rt-1941-2
+		hostname RT-DIP-01
 		service password-encryption
 		service timestamps log datetime msec
 		service timestamps debug datetime msec
