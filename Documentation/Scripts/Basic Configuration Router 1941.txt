@@ -9,7 +9,7 @@ clock set 14:00:00 10 July 2020
 		service timestamps log datetime msec
 		service timestamps debug datetime msec
 		no ip domain-lookup
-		banner motd #
+        banner motd #
                  uuuuuuu
              uu$$$$$$$$$$$uu
           uu$$$$$$$$$$$$$$$$$uu
@@ -37,13 +37,15 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
    "$$$$$"                      ""$$$$""
      $$$"                         $$$$"
 
- _  _  _       _                             _                  _         
-| || || |     | |                           | |                (_)        
-| || || | ____| | ____ ___  ____   ____     | |      ___   ____ _ ____    
-| ||_|| |/ _  ) |/ ___) _ \|    \ / _  )    | |     / _ \ / _  | |  _ \   
-| |___| ( (/ /| ( (__| |_| | | | ( (/ / _   | |____| |_| ( ( | | | | | |_ 
- \______|\____)_|\____)___/|_|_|_|\____| )  |_______)___/ \_|| |_|_| |_(_)
-                                       |/                (_____|          
+ ______   _______  _         _______  _______ _________
+(  __  \ (  ____ )( \       (  ____ \(  ____ \\__   __/
+| (  \  )| (    )|| (       | (    \/| (    \/   ) (   
+| |   ) || (____)|| | _____ | |      | |         | |   
+| |   | ||  _____)| |(_____)| |      | |         | |   
+| |   ) || (      | |       | |      | |         | |   
+| (__/  )| )      | (____/\ | (____/\| (____/\   | |   
+(______/ |/       (_______/ (_______/(_______/   )_(   
+                                                       
 #
 		security passwords min-length 6
 		enable secret cct12#
@@ -76,5 +78,11 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
 			logging synchronous
 			exec-timeout 5 30
 			transport input ssh
+			exit
+		!Activating VLan
+		interface vlan 1
+			description Management Interface
+			ip address 192.168.0.150 255.255.255.0
+			no shutdown
 			end
 write

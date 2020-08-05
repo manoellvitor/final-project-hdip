@@ -12,7 +12,7 @@ clock set 14:00:00 10 July 2020
 	configure terminal
 
         !Changing the Hostname
-		hostname SW-RAD-01
+		hostname CORE-MAIN-01
         
         !Enabling passowds type7 (More security)
 		service password-encryption
@@ -107,7 +107,7 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
 			exit
 
         !Activating VLan
-		interface vlan 100
+		interface vlan 1
 			description Management Interface
 			ip address 192.168.0.150 255.255.255.0
 			no shutdown

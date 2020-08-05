@@ -10,3 +10,10 @@ https://community.cisco.com/t5/switching/how-to-assign-a-range-of-interfaces-to-
 como deletar uma vlan:
 
 https://community.cisco.com/t5/switching/how-to-delete-a-vlan/td-p/776599
+
+como criar um dns cisco pt
+https://computernetworking747640215.wordpress.com/2018/07/05/dns-server-configuration-in-packet-tracer/
+
+como configurar ssh
+
+https://computernetworking747640215.wordpress.com/2018/07/05/secure-shell-ssh-configuration-on-a-switch-and-router-in-packet-tracer/
