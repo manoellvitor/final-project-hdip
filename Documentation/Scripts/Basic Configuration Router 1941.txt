@@ -4,11 +4,11 @@
 enable
 clock set 14:00:00 10 July 2020
 	configure terminal
-		hostname RT-DIP-01
+		hostname RT-DIP-02
 		service password-encryption
 		service timestamps log datetime msec
 		service timestamps debug datetime msec
-		no ip domain-lookup
+		!no ip domain-lookup
         banner motd #
                  uuuuuuu
              uu$$$$$$$$$$$uu
@@ -78,11 +78,5 @@ $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
 			logging synchronous
 			exec-timeout 5 30
 			transport input ssh
-			exit
-		!Activating VLan
-		interface vlan 1
-			description Management Interface
-			ip address 192.168.0.150 255.255.255.0
-			no shutdown
 			end
 write
