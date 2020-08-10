@@ -1,5 +1,5 @@
 ########### IPS #############
-Firewa.ll - 	92.168.1.1
+Firewa.ll - 	192.168.1.1
 Dashboad -		https://192.168.1.1:10443
 Users - 		admin / root
 Password - 		Mariarosa12#
@@ -13,13 +13,13 @@ GW - 			192.168.1.1
 USER - manoel
 PWD - Mariarosa12#
 
-###### DPL Samba Server ######
+###### DPL Samba Server - Debian 10 ######
 HOSTNAME - dpldublindc01sb01
 IP - 192.168.1.10
 MASK - 255.255.255.0
 BCAST - 192.168.1.255
 GW - 192.168.1.1
-USER - manoel
+USER - manoel / root
 PWD - Mariarosa12#
 
 ###### DPL ICT - Windows 7 ######
