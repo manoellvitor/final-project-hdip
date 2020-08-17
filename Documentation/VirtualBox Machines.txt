@@ -43,14 +43,17 @@ PWD - Mariarosa12#
 DOMAIN USER - ict01
 PWD - Mariarosa12#
 
-###### Linux Lite MAN ######
-HOSTNAME - dplmandt01
+###### SAM Linux Mint ######
+HOSTNAME - dplictdt02
 IP - DHCP
 MASK - DHCP
 BCAST - DHCP
 GW - DHCP
-USER - manu
-PWD - cct12#
+USER - Manoel
+PWD - Mariarosa12#
+
+DOMAIN USER - sam01
+PWD - Mariarosa12#
 
 
 ###### Domain #######
